@@ -3,12 +3,12 @@ from django.shortcuts import render
 from familiares.models import Familiares
 
 # Create your views here.
-def familiares(request):
+def generar_familiar(request):
     famliar_nuevo = Familiares.objects.create(
-            nombre = "Ian",
-            apellido = "Iwanczuk",
-            nacimiento = "02/10/2022",
-            edad = "19",
+            nombre = "Roberto",
+            apellido = "Milan",
+            nacimiento = "12/14/2006",
+            edad = "45",
             )
     context = {'familiar_nuevo': famliar_nuevo}
     return render(request, 'familiares.html', context=context)
